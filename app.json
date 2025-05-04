@@ -18,10 +18,16 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png"
-      }
+      },
+      "package": "com.tova501.MyFirstApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3fdde8dd-82ce-45e1-80eb-5988a5593e05"
+      }
     }
   }
 }
