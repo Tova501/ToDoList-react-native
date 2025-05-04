@@ -6,7 +6,7 @@ const Stack = createStackNavigator();
 
 export default function AppNavigator() {
     return (
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="Home" style={{backgroundColor: 'transparent'}} >
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="AddTask" component={AddTask} />
         </Stack.Navigator>

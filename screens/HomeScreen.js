@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Button, Alert } from 'react-native';
+import { View, Button, Alert,ImageBackground,StyleSheet } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import TaskList from '../components/TaskList';
 
@@ -29,10 +29,27 @@ export default function HomeScreen({ navigation }) {
     };
 
     return (
-        <View style={{ flex: 1, padding: 20 }}>
+        <ImageBackground 
+        source={require('../assets/b2.jpg')} 
+        style={styles.background}
+      >
+        <View style={{ flex: 1, padding: 20, backgroundColor: 'transparent' }}>
             <TaskList tasks={tasks} onDelete={deleteTask} />
             <Button title="Add Task" onPress={() => navigation.navigate('AddTask', { addTask })} />
 
         </View>
+        </ImageBackground>
+
     );
+    
 }
+
+const styles = StyleSheet.create({
+    
+    background: {
+      flex: 1,
+      resizeMode: 'cover', 
+      justifyContent: 'center',
+    },
+  });
+  
